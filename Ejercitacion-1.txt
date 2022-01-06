@@ -1,25 +1,36 @@
-1)
-create table curso (codigo int PRIMARY KEY not null, nombre varchar(50) not null, descripcion varchar(50), turno varchar(50) not null)
+1) Cree una tabla llamada CURSO con los atributos:
+    -Código de curso (clave primaria, entero no nulo)
+    -Nombre (varchar no nulo)
+    -Descripcion (varcha)
+    -Turno (varchar no nulo)
 
-2)
-alter table curso add cupo int
+Solución: create table curso (codigo int PRIMARY KEY not null, nombre varchar(50) not null, descripcion varchar(50), turno varchar(50) not null)
 
-3)
+2) Agregue un campo "cupo" de tipo numérico:
+
+Solución: alter table curso add cupo int
+
+3) Inserte datos en la tabla:
+    a) (101, “Algoritmos”,”Algoritmos y Estructuras de Datos”,”Mañana”,35)
+    b) (102, “Matemática Discreta”,””,”Tarde”,30)
 
     a)
-    INSERT into curso VALUES (101, "Algoritmos","Algoritmos y Estructuras de Datos","Mañana",35)
+    Solución: INSERT into curso VALUES (101, "Algoritmos","Algoritmos y Estructuras de Datos","Mañana",35)
 
     b)
-    INSERT into curso values (102, "Matemática Discreta","","Tarde",30)
+    Solución: INSERT into curso values (102, "Matemática Discreta","","Tarde",30)
 
-4)
-INSERT into curso values (null, "" ,"nombre nulo","Tnoche", 28)
+4) Intente ingresar un registro con el nombre nulo y verifique que no funciona.
 
-5)
-INSERT into curso VALUES (101, "Programación","Programación de videojuegos","Noche", 15)
+Solución: INSERT into curso values (null, "" ,"nombre nulo","Tnoche", 28)
 
-6)
-UPDATE curso set cupo = 25
+5) Intente ingresar un registro con la clave primaria repetida y verifique que no funciona.
 
-7)
-delete from curso where nombre = "Algoritmos"
+Solución: INSERT into curso VALUES (101, "Programación","Programación de videojuegos","Noche", 15)
+
+6) Actualice, para todos los cursos, el cupo en 25.
+
+Solución: UPDATE curso set cupo = 25
+
+7) Elimine el curso Algoritmos.
+Solución: delete from curso where nombre = "Algoritmos"
